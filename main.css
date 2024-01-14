@@ -1,8 +1,8 @@
 /* Start Variables */
 :root {
-  --main-color: red;
+  --main-color: #63E6BE;
   --text-color: darkolivegreen;
-  --black-color: black;
+  --light-color: white;
 }
 /* End Variables */
 
@@ -52,10 +52,10 @@ p{
 /*large screen*/
 @media (min-width: 700px) {
 .col{
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 20px;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+ grid-gap: 20px;
+ margin-top: 100px;
 }
 }
 
@@ -93,7 +93,7 @@ h4{
 }
 
 .header  ul li {
-  margin: 10px ;
+  margin: 20px ;
 }
 
 .header ul li a{
@@ -111,8 +111,14 @@ h4{
 .loading .box img{
  border-radius: 50%;
  margin-bottom: 20px;
+ width: 90%;
 }
 
+@media (min-width: 678px) {
+.loading .box img{
+ width: 60%;
+}
+}
 .loading .box h1{
  margin-bottom: 20px;
 }
@@ -120,16 +126,6 @@ h4{
  font-weight: normal;
 }
 
-/*
-.loading .box .submit{
- background-color: var(--main-color);
- padding: 10px;
- width: 90%;
- border-radius: 20px;
- color: white;
- font-weight: bold;
-}
-*/
 /*-- end loading --*/
 
 /*start stuff*/
@@ -173,7 +169,7 @@ h4{
 @media (min-width: 700px) {
 .images .columns{
  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   margin-top: 100px;
 }
@@ -193,3 +189,65 @@ h4{
  margin-top: 30px;
 }
 /*end images*/
+
+/*start footer*/
+.footer {
+ background-color: var(--main-color);
+ text-align: center;
+ padding: 40px;
+ margin-top: 30px;
+}
+
+.footer .form input{
+ width: 100%;
+ margin-bottom: 20px;
+ padding: 10px;
+ background-color: var(--light-color);
+ border-radius: 5px;
+}
+
+textarea {
+ width: 100%;
+ height: 200px;
+ padding: 12px 20px;
+ border-radius: 5px;
+ background-color: var(--light-color);
+ resize: none;
+}
+
+.footer .form button{
+ padding: 10px;
+ margin-top: 20px;
+ width: 100%;
+ border-radius: 5px;
+ font-weight: bold;
+}
+
+/*the social media*/
+.footer .social {
+ margin-top: 50px;
+ margin-bottom: 20px;
+}
+
+.footer .social i{
+ font-size: 30px;
+ margin: 10px;
+}
+
+@media (min-width: 700px) {
+ .cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+ }
+}
+/*the copy right*/
+.footer .copyright p{
+ color: black;
+}
+
+.footer .copyright a{
+ color: var(--light-color);
+}
+/*end footer*/
+
